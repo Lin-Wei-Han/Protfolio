@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+$home-bg-color:rgb(30, 30, 30);
+$home-bg-color-red:rgb(220, 20, 60);
+$home-fontcolor-red:rgb(220, 20, 60);
+
+.wrapper .button{
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    margin-right: 2rem;
+    margin-bottom: 10rem;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    line-height: 5rem;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+    &:hover{
+        width: 170px;
+      }
+
+    & .icon{
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+        margin-left: -1px;
+        text-align: center;
+        border-radius: 50px;
+        line-height: 5rem;
+        transition: all 0.3s ease-out;
+        color: rgb(30, 30, 30);
+      }
+  }
+  .wrapper .button:nth-child(1):hover .icon{
+    background: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(4):hover .icon{
+    background: $home-bg-color-red;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 5rem;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .button span{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 5rem;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span{
+    color: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: $home-bg-color-red;
+  }
+  .wrapper .button:nth-child(4) span{
+    color: $home-bg-color-red;
+  }
+
+
+/**************************/
+/* BELOW 1344px           */
+/**************************/
+@media (max-width: 1344px) {
+    .wrapper .button{
+        margin-bottom: 5rem;
+    }
+}
+
+/**************************/
+/* BELOW 1200px           */
+/**************************/
+
+@media (max-width: 1200px) {
+    .wrapper .button{
+        margin-bottom: 5rem;
+    }
+}
+
+
+  /**************************/
+/* BELOW 944px  */
+/**************************/
+
+@media (max-width: 944px) {
+    .wrapper{
+        position: fixed;
+        bottom: 0;
+        height: 7rem;
+        width: 100vw;
+        margin-left: -3rem;
+        .wrapper-content{
+            width: fit-content;
+            margin: auto;
+            .button{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+}
+
+  /**************************/
+/* BELOW 768px */
+/**************************/
+
+
+/**************************/
+/* BELOW 425px */
+/**************************/
+
+@media (max-width: 944px) {
+  .wrapper{
+      .wrapper-content{
+          .button{
+            &:hover{
+              width: 5rem;
+            }
+            & .icon{
+              margin-left: 0px;
+            }
+          }
+      }
+  }
+
+}

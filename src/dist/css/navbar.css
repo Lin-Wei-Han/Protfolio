@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+.wrapper .button {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 2rem;
+  margin-bottom: 10rem;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  line-height: 5rem;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover {
+  width: 170px;
+}
+.wrapper .button .icon {
+  display: inline-block;
+  height: 5rem;
+  width: 5rem;
+  margin-left: -1px;
+  text-align: center;
+  border-radius: 50px;
+  line-height: 5rem;
+  transition: all 0.3s ease-out;
+  color: #1e1e1e;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+  background: crimson;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+  background: crimson;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+  background: crimson;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+  background: crimson;
+}
+
+.wrapper .button .icon i {
+  font-size: 25px;
+  line-height: 5rem;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+
+.wrapper .button span {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 5rem;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+  color: crimson;
+}
+
+.wrapper .button:nth-child(2) span {
+  color: crimson;
+}
+
+.wrapper .button:nth-child(3) span {
+  color: crimson;
+}
+
+.wrapper .button:nth-child(4) span {
+  color: crimson;
+}
+
+/**************************/
+/* BELOW 1344px           */
+/**************************/
+@media (max-width: 1344px) {
+  .wrapper .button {
+    margin-bottom: 5rem;
+  }
+}
+/**************************/
+/* BELOW 1200px           */
+/**************************/
+@media (max-width: 1200px) {
+  .wrapper .button {
+    margin-bottom: 5rem;
+  }
+}
+/**************************/
+/* BELOW 944px  */
+/**************************/
+@media (max-width: 944px) {
+  .wrapper {
+    position: fixed;
+    bottom: 0;
+    height: 7rem;
+    width: 100vw;
+    margin-left: -3rem;
+  }
+  .wrapper .wrapper-content {
+    width: fit-content;
+    margin: auto;
+  }
+  .wrapper .wrapper-content .button {
+    margin-bottom: 0;
+  }
+}
+/**************************/
+/* BELOW 768px */
+/**************************/
+/**************************/
+/* BELOW 425px */
+/**************************/
+@media (max-width: 944px) {
+  .wrapper .wrapper-content .button:hover {
+    width: 5rem;
+  }
+  .wrapper .wrapper-content .button .icon {
+    margin-left: 0px;
+  }
+}
+
+/*# sourceMappingURL=navbar.css.map */
