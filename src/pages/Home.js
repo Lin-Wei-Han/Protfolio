@@ -1,7 +1,8 @@
 import React from 'react';
-import personal from '../dist/image/GOA00060-1.jpg';
 import { motion } from "framer-motion";
 import Navbar from '../components/Navbar';
+import textCloud from '../dist/image/personal_textcloud1.png';
+import '../dist/scss/home.scss';
 
 const Home = () => {
 
@@ -38,7 +39,6 @@ const Home = () => {
         );
     };
 
-
     const content = {
         animate: {
             transition: { staggerChildren: 0.1, delayChildren: 0.8 },
@@ -46,41 +46,38 @@ const Home = () => {
     };
 
     const title = {
-        initial: { y: 30, opacity: 0.1 },
+        initial: { y: 40, opacity: 0.1 },
         animate: {
             y: 0,
             opacity: 1,
             transition: {
-                duration: 0.5,
+                duration: 0.8,
                 ease: [0.2, -0.05, 0.01, 0.9],
             },
         },
     };
 
     return (
-        <>
-            <motion.section className='section-home' >
-                <InitialTransition />
-                <motion.div
-                    initial="initial"
-                    animate="animate"
-                    variants={content}
-                    className='home-content'
-                >
-                    <motion.div variants={title} className='home-text'>
-                        <Navbar />
-                        <h1>I'm LIN WEI HAN</h1>
-                        <h3>WED DEVELOPER</h3>
-                        <p>Hi ! I'm John Lin.Wed developer with over one year of experience.
-                            Focused on front-end develop , web design and Data Visualization.
-                            Graduate from Tamkang University.
-                        </p>
-                        <button>Contact Me</button>
-                    </motion.div>
-                    <motion.img variants={title} className='personal-image' src={personal} alt="PersonalImage" />
-                </motion.div>
+        <motion.div
+            initial="initial"
+            animate="animate"
+            variants={content}
+            className="max-width-home">
+            <InitialTransition />
+            <Navbar />
+            <motion.section variants={title} className="section-info">
+                <motion.section className="info-left">
+                    <h1 className="web-title">WED DEVELOPER</h1>
+                    <h5 className="web-info">Wed developer with over two year of experience. Focused on front-end develop and web design .</h5>
+                </motion.section>
+                <motion.section className="info-right">
+                    <h1 className="data-title">DATA ANALYST</h1>
+                    <h5 className="data-info">Data collection ,  cleaning and analysis . Focused on Machine Learning , Modeling and
+                        data  visualization .</h5>
+                </motion.section>
             </motion.section>
-        </>
+            <motion.img variants={title} className="banner" src={textCloud} alt="" />
+        </motion.div>
     )
 }
 
