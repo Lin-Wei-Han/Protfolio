@@ -108,7 +108,7 @@ const Resume = () => {
                     </motion.section>
                 </motion.div>
             </motion.div>
-            <section style={{ overflow: "scroll" }} className={resume()}>
+            <section className={resume()}>
                 <h1 className='resume-title'>RESUME</h1>
                 <div className='resume-button-container'>
                     <div className='resume-content-button'>
