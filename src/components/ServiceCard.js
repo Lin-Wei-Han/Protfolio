@@ -14,7 +14,7 @@ const ServiceCard = () => {
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 1 },
         { width: 768, itemsToShow: 2 },
-        { width: 960, itemsToShow: 3 },
+        { width: 980, itemsToShow: 3 },
         { width: 1200, itemsToShow: 3 },
     ];
 
@@ -67,7 +67,7 @@ export const style = () => css`
                 display: flex;
                 margin: auto 0;
                 line-height:2.5rem;
-                font-size:2rem;
+                font-size:1.8rem;
                 color: crimson;
                 font-weight:600;
                 .icon-circle{
@@ -79,7 +79,7 @@ export const style = () => css`
                     border-radius:25px;
                     .icon{
                         display: block;
-                        margin: 3px auto 0 auto;
+                        margin: 5px auto 0 auto;
                         color: white;
                         width: 1.7rem;
                     }
@@ -87,7 +87,7 @@ export const style = () => css`
             }
             .MuiTypography-body2{
                 padding-top:2rem;
-                font-size:1.3rem;
+                font-size:1.2rem;
             }
         }
     }
@@ -100,6 +100,22 @@ export const style = () => css`
             }
         }
     }
+
+@media screen and (max-width:1060px) { 
+    .service-card{
+        .MuiCardContent-root{
+            .MuiTypography-h5{
+                font-size:1.6rem;
+                .icon-circle{
+                    .icon{
+                        margin: 7px auto 0 auto;
+                    }
+                }
+            }
+            }
+        }
+    }
+}
 
 @media screen and (max-width:980px) { 
     .service-card{

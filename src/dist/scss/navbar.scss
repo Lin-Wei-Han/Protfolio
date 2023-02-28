@@ -16,8 +16,26 @@ $home-fontcolor-red:rgb(220, 20, 60);
     color: #2D2C2C;
     background-color: rgba($color: #ffffff, $alpha: 0.5);
     z-index: 9;
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
+    transition: 0.5s ease;
+/*     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px); */
+
+    &.active{
+        background-color:crimson;
+        color:white;
+        transition: 0.5s ease;
+        padding: 12px 20px;
+        .logo .title span{
+            color: white;
+            transition: 0.5s ease;
+        }
+        .navbar ul li a{
+            color: white;
+            &:hover{
+                color: #2D2C2C;
+            }
+        }
+    }
 
   .logo .title{
       cursor: pointer;
@@ -27,6 +45,7 @@ $home-fontcolor-red:rgb(220, 20, 60);
   }
 
   .navbar{
+    margin: auto 0;
       ul{
           display: flex;
           list-style-type: none;
@@ -54,6 +73,11 @@ $home-fontcolor-red:rgb(220, 20, 60);
   font-size: 23px;
   cursor: pointer;
   display: none;
+  transition: 0.5s ease;
+  &.active{
+    color: white;
+    transition: 0.5s ease;
+  }
 }
 
 @media screen and (max-width:1000px) { 
@@ -105,13 +129,13 @@ $home-fontcolor-red:rgb(220, 20, 60);
   .menu-btn{
       display: block;
       position: fixed;
+      margin-top: -5px;
       right: 1rem;
       top: 1.5rem;
       z-index: 999;
-/*       & i.active:before{
-          color: white;
-          content: "\f00d";
-      } */
+      .menu-icon{
+        margin: auto 0;
+      }
   }
 
   .header{

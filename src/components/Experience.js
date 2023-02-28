@@ -8,8 +8,10 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { workList } from '../data/work';
 import { contestList } from '../data/contest';
+import { motion } from "framer-motion";
 
 const Experience = () => {
+
     return (
         <div className={style()}>
             <div className='exp-left'>
@@ -20,35 +22,48 @@ const Experience = () => {
                     },
                 }}>
                     {workList.map((work, index) => (
-                        <TimelineItem key={index}>
-                            <TimelineSeparator>
-                                <TimelineDot sx={{
-                                    backgroundColor: '#dc143c'
-                                }} />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent className={timeline()}>
-                                <div className='title'>{work.title}</div>
-                                <div className='description'>
-                                    <div className='secondary'>{work.secondary}</div>
-                                    <p className='content-list'>{work.description}</p>
-                                    {work.skillList ?
-                                        <>{work.skillList.map((skill, index) => (
-                                            <p className='skill-list' key={index}>
-                                                {skill.title}
-                                                {skill.content ?
-                                                    <ul>
-                                                        {skill.content.map((detail, index) => (
-                                                            <li key={index}>{detail.contentDetail}</li>
-                                                        ))}
-                                                    </ul>
-                                                    : ""}
-                                            </p>
-                                        ))}</>
-                                        : ""}
-                                </div>
-                            </TimelineContent>
-                        </TimelineItem>
+                        <motion.div variants={{
+                            initial: { y: 40, opacity: 0 },
+                            animate: {
+                                y: 0,
+                                opacity: 1,
+                                transition: {
+                                    delay: index * 2 / 10,
+                                    duration: 0.8,
+                                    ease: [0.2, -0.05, 0.01, 0.9],
+                                },
+                            },
+                        }} initial="initial" animate="animate">
+                            <TimelineItem key={index}>
+                                <TimelineSeparator>
+                                    <TimelineDot sx={{
+                                        backgroundColor: '#dc143c'
+                                    }} />
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent className={timeline()}>
+                                    <div className='title'>{work.title}</div>
+                                    <div className='description'>
+                                        <div className='secondary'>{work.secondary}</div>
+                                        <p className='content-list'>{work.description}</p>
+                                        {work.skillList ?
+                                            <>{work.skillList.map((skill, index) => (
+                                                <p className='skill-list' key={index}>
+                                                    {skill.title}
+                                                    {skill.content ?
+                                                        <ul>
+                                                            {skill.content.map((detail, index) => (
+                                                                <li key={index}>{detail.contentDetail}</li>
+                                                            ))}
+                                                        </ul>
+                                                        : ""}
+                                                </p>
+                                            ))}</>
+                                            : ""}
+                                    </div>
+                                </TimelineContent>
+                            </TimelineItem>
+                        </motion.div>
                     ))}
                 </Timeline>
             </div>
@@ -60,35 +75,48 @@ const Experience = () => {
                     },
                 }}>
                     {contestList.map((work, index) => (
-                        <TimelineItem key={index}>
-                            <TimelineSeparator>
-                                <TimelineDot sx={{
-                                    backgroundColor: '#006aa6'
-                                }} />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent className={timeline()}>
-                                <div className='title'>{work.title}</div>
-                                <div className='description'>
-                                    <div className='secondary'>{work.secondary}</div>
-                                    <p className='content-list'>{work.description}</p>
-                                    {work.skillList ?
-                                        <>{work.skillList.map((skill, index) => (
-                                            <p className='skill-list' key={index}>
-                                                {skill.title}
-                                                {skill.content ?
-                                                    <ul>
-                                                        {skill.content.map((detail, index) => (
-                                                            <li key={index}>{detail.contentDetail}</li>
-                                                        ))}
-                                                    </ul>
-                                                    : ""}
-                                            </p>
-                                        ))}</>
-                                        : ""}
-                                </div>
-                            </TimelineContent>
-                        </TimelineItem>
+                        <motion.div variants={{
+                            initial: { y: 40, opacity: 0 },
+                            animate: {
+                                y: 0,
+                                opacity: 1,
+                                transition: {
+                                    delay: index * 3 / 10,
+                                    duration: 0.8,
+                                    ease: [0.2, -0.05, 0.01, 0.9],
+                                },
+                            },
+                        }} initial="initial" animate="animate">
+                            <TimelineItem key={index}>
+                                <TimelineSeparator>
+                                    <TimelineDot sx={{
+                                        backgroundColor: '#006aa6'
+                                    }} />
+                                    <TimelineConnector />
+                                </TimelineSeparator>
+                                <TimelineContent className={timeline()}>
+                                    <div className='title'>{work.title}</div>
+                                    <div className='description'>
+                                        <div className='secondary'>{work.secondary}</div>
+                                        <p className='content-list'>{work.description}</p>
+                                        {work.skillList ?
+                                            <>{work.skillList.map((skill, index) => (
+                                                <p className='skill-list' key={index}>
+                                                    {skill.title}
+                                                    {skill.content ?
+                                                        <ul>
+                                                            {skill.content.map((detail, index) => (
+                                                                <li key={index}>{detail.contentDetail}</li>
+                                                            ))}
+                                                        </ul>
+                                                        : ""}
+                                                </p>
+                                            ))}</>
+                                            : ""}
+                                    </div>
+                                </TimelineContent>
+                            </TimelineItem>
+                        </motion.div>
                     ))}
                 </Timeline>
             </div>

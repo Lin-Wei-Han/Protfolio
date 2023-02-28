@@ -23,13 +23,23 @@ const page = [
 ]
 
 const Navbar = () => {
-    const [barClass, setBarClass] = React.useState(false)
+    const [barClass, setBarClass] = React.useState(false);
+    const [currentScrollY, setCurrentScrollY] = React.useState();
 
     const handleChangeBar = (index) => () => setBarClass(index);
 
+    const handleScroll = () => {
+        setCurrentScrollY(window.scrollY)
+    };
+
+    React.useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        console.log(currentScrollY);
+    }, [currentScrollY])
+
     return (
         <>
-            <header className="header">
+            <header className={cx("header", currentScrollY > 0 ? "active" : "")}>
                 <div className="logo">
                     <h1 className="title">Protfo<span>lio</span></h1>
                 </div>
@@ -40,11 +50,11 @@ const Navbar = () => {
                         ))}
                     </ul>
                 </nav>
-            </header>
-            <div className="menu-btn">
-                {!barClass ? <HiMenu onClick={handleChangeBar(true)} /> :
-                    <IoClose style={{ color: "white" }} onClick={handleChangeBar(false)} />}
-            </div>
+                <div className={cx("menu-btn", currentScrollY > 0 ? "active" : "")}>
+                    {!barClass ? <HiMenu className='menu-icon' onClick={handleChangeBar(true)} /> :
+                        <IoClose style={{ color: "white" }} onClick={handleChangeBar(false)} />}
+                </div>
+            </header >
         </>
     )
 }

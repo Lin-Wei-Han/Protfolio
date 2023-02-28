@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../dist/scss/about.scss';
 import personal from '../dist/image/Group.png';
+/* import personalHigh from 'https://upload.cc/i1/2023/02/28/fKRCD1.png'; */
 import SkillBar from '../components/SkillBar';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
@@ -17,10 +18,12 @@ const tabContent = {
 };
 
 const Resume = () => {
-    const [isBegin, setIsBegin] = React.useState(true)
+
+    const [isBegin, setIsBegin] = React.useState(true);
     const [tabResumeContent, setTabResumeContent] = React.useState(tabContent.skill);
 
     const handleChangeContent = (tabResumeType) => setTabResumeContent(tabResumeType);
+
 
     const blackBox = {
         initial: {
@@ -105,7 +108,7 @@ const Resume = () => {
                     </motion.section>
                 </motion.div>
             </motion.div>
-            <motion.section variants={title} className={resume()}>
+            <section style={{ overflow: "scroll" }} className={resume()}>
                 <h1 className='resume-title'>RESUME</h1>
                 <div className='resume-button-container'>
                     <div className='resume-content-button'>
@@ -122,7 +125,7 @@ const Resume = () => {
                         tabResumeContent === tabContent.edu ? <Education /> :
                             tabResumeContent === tabContent.exp ? <Experience /> : ""}
                 </div>
-            </motion.section>
+            </section>
             <motion.section variants={title} className={service()}>
                 <h1 className='resume-title'>SERVICES</h1>
                 <ServiceCard />
