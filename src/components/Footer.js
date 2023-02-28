@@ -5,7 +5,7 @@ import { BiCopyright } from 'react-icons/bi';
 const Footer = () => {
     return (
         <footer className={style()}>
-            <span>Created By <a href="./">Lin</a> | <BiCopyright className='copyRightIcon' /> 2022 All rights reserved.</span>
+            <span>Created By <a href="./">Lin</a> | <BiCopyright className='copyRightIcon' /> 2023 All rights reserved.</span>
         </footer>
     )
 }
