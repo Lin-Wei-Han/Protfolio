@@ -2,7 +2,7 @@ import ReactGA from "react-ga4";
 import gaEventConfig from "./gaEventConfig.constants";
 
 export const init = () => {
-    return ReactGA.initialize(process.env.REACT_GA_KEY);
+    return ReactGA.initialize(process.env.REACT_APP_GA_KEY);
 };
 
 // custom pageview with the location from react router

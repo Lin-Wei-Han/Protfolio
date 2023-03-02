@@ -13,7 +13,6 @@ ServiceGA4.init();
 function App() {
 
   React.useEffect(() => {
-    console.log(process.env.REACT_GA_KEY);
     ServiceGA4.pageView(window.location.pathname + window.location.search);
   }, []);
 
