@@ -15,6 +15,7 @@ import Footer from '../components/Footer';
 import pin from '../dist/image/icon/pin.png';
 import mail from '../dist/image/icon/mail.png';
 import phone from '../dist/image/icon/phone-call.png';
+import ServiceGA4, { GA_EVENT } from "../services/ga4.service";
 
 const contactList = [
     {
@@ -59,6 +60,7 @@ const Contact = () => {
                 setMail(DEFAULT_FORM)
                 if (result.text === "OK") {
                     enqueueSnackbar(`Send Mail Success!`, { variant: "success" });
+                    ServiceGA4.event(GA_EVENT.send_mail);
                 }
             }, (error) => {
                 setMail(DEFAULT_FORM)
@@ -100,8 +102,8 @@ const Contact = () => {
     };
 
     React.useEffect(() => {
-        console.log(mail);
-    }, [mail])
+        ServiceGA4.init()
+    }, []);
 
     return (
         <motion.div
@@ -136,9 +138,9 @@ const Contact = () => {
                             </div>
                         ))}
                         <div className="social-media">
-                            <a href="https://www.facebook.com/profile.php?id=100004293253951"><BsFacebook className='media-icon' /></a>
-                            <a href="https://www.instagram.com/xcswap.john/"><AiFillInstagram className='media-icon ig' /></a>
-                            <a href="https://github.com/Lin-Wei-Han"><AiFillGithub className='media-icon github' /></a>
+                            <a onClick={() => ServiceGA4.event(GA_EVENT.contact_fb)} href="https://www.facebook.com/profile.php?id=100004293253951"><BsFacebook className='media-icon' /></a>
+                            <a onClick={() => ServiceGA4.event(GA_EVENT.contact_ig)} href="https://www.instagram.com/xcswap.john/"><AiFillInstagram className='media-icon ig' /></a>
+                            <a onClick={() => ServiceGA4.event(GA_EVENT.contact_github)} href="https://github.com/Lin-Wei-Han"><AiFillGithub className='media-icon github' /></a>
                         </div>
                     </div>
                     <div className="contact-right">

@@ -10,6 +10,7 @@ import SkillBar from '../components/SkillBar';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
 import ServiceCard from '../components/ServiceCard';
+import ServiceGA4, { GA_EVENT } from "../services/ga4.service";
 
 const tabContent = {
     skill: "skill",
@@ -23,6 +24,10 @@ const Resume = () => {
     const [tabResumeContent, setTabResumeContent] = React.useState(tabContent.skill);
 
     const handleChangeContent = (tabResumeType) => setTabResumeContent(tabResumeType);
+
+    const downloadCV = () => {
+        ServiceGA4.event(GA_EVENT.download_cv);
+    }
 
 
     const blackBox = {
@@ -76,6 +81,10 @@ const Resume = () => {
         setTimeout(() => setIsBegin(false), 2000)
     }, [isBegin])
 
+    React.useEffect(() => {
+        ServiceGA4.init()
+    }, []);
+
     return (
         <>
             <Navbar />
@@ -103,7 +112,7 @@ const Resume = () => {
                         <p className="intro">同時，熟悉R、SAS、Python數據分析。喜歡透過視覺化的方式，呈現數據，
                             讓用戶更清楚的知道數據變動的意義。具備資料探勘、機器學習、統計分析、網路爬蟲、創建模型...等技術。</p>
                         <div className="button">
-                            <div class="button-cv">DOWNLOAD CV</div>
+                            <div class="button-cv" onClick={() => downloadCV()}>DOWNLOAD CV</div>
                         </div>
                     </motion.section>
                 </motion.div>
@@ -113,11 +122,11 @@ const Resume = () => {
                 <div className='resume-button-container'>
                     <div className='resume-content-button'>
                         <div className={cx("resume-button", tabResumeContent === tabContent.skill ? "active" : "")}
-                            onClick={() => handleChangeContent(tabContent.skill)}>SKILL</div>
+                            onClick={() => { handleChangeContent(tabContent.skill); ServiceGA4.event(GA_EVENT.resume_skill); }}>SKILL</div>
                         <div className={cx("resume-button", tabResumeContent === tabContent.edu ? "active" : "")}
-                            onClick={() => handleChangeContent(tabContent.edu)}>EDUCATION</div>
+                            onClick={() => { handleChangeContent(tabContent.edu); ServiceGA4.event(GA_EVENT.resume_education); }}>EDUCATION</div>
                         <div className={cx("resume-button", tabResumeContent === tabContent.exp ? "active" : "")}
-                            onClick={() => handleChangeContent(tabContent.exp)}>EXPERIENCE</div>
+                            onClick={() => { handleChangeContent(tabContent.exp); ServiceGA4.event(GA_EVENT.resume_experience); }}>EXPERIENCE</div>
                     </div>
                 </div>
                 <div className='resume-content'>

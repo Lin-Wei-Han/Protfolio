@@ -34,7 +34,6 @@ const Navbar = () => {
 
     React.useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-        console.log(currentScrollY);
     }, [currentScrollY])
 
     return (
