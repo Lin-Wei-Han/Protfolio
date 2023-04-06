@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { css, cx } from "@emotion/css/macro";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { useSnackbar } from 'notistack';
 import '../dist/scss/about.scss';
 import personal from '../dist/image/Group.png';
 /* import personalHigh from 'https://upload.cc/i1/2023/02/28/fKRCD1.png'; */
@@ -19,7 +20,7 @@ const tabContent = {
 };
 
 const Resume = () => {
-
+    const { enqueueSnackbar } = useSnackbar();
     const [isBegin, setIsBegin] = React.useState(true);
     const [tabResumeContent, setTabResumeContent] = React.useState(tabContent.skill);
 
@@ -27,6 +28,13 @@ const Resume = () => {
 
     const downloadCV = () => {
         ServiceGA4.event(GA_EVENT.download_cv);
+
+        try {
+            window.location.href = "https://drive.google.com/u/2/uc?id=1TjJlN96on5PLHpJe7XR5-S-YTlcqV39Y&export=download"
+            enqueueSnackbar(`Download Resume Success!`, { variant: "success" });
+        } catch (error) {
+            enqueueSnackbar(`Download Resume Failed! ${error}`, { variant: "error" });
+        }
     }
 
 
@@ -214,7 +222,6 @@ const style = () => css`
         border: 3px solid crimson;
         cursor: pointer;
         transition: 0.5s ease;
-
         &:hover{
             color: #ffffff;
             background-color: crimson;

@@ -7,6 +7,7 @@ import power_bi_covid from '../dist/image/project/power_bi_covid.png';
 import powerbi_trafic from '../dist/image/project/powerbi_trafic.png';
 import reactobjectdetect from '../dist/image/project/reactobjectdetect.png';
 import shinydashboard from '../dist/image/project/shinydashboard.png';
+import clinicalTrial from '../dist/image/project/clinicalTrial.png';
 
 const projectDetail = [
     {
@@ -35,6 +36,13 @@ const projectDetail = [
         info: "利用 Power BI 串接全國交通事故統計資料，以視覺化圖表呈現各地區車禍事故的分布熱點，並進一步觀察主要發生交通事故的肇事主因。並公開部署至雲端，供民眾使用。",
         img: powerbi_trafic,
         url: "https://reurl.cc/6Lnmv5",
+        type: ["data", "web"]
+    },
+    {
+        title: "美國退伍軍人醫院肺癌臨床試驗 Dashboard",
+        info: "1973 年針對美國退伍軍人醫院進行肺癌臨床試驗，將其資料利用 Power BI 進行視覺化，觀察新舊治療方法，對患者存活時間、KPS指標的影響",
+        img: clinicalTrial,
+        url: "https://reurl.cc/9Vy1Ga",
         type: ["data", "web"]
     },
     {
