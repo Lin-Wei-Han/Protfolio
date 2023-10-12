@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 
 const educationList = [
     {
-        name: "淡江大學統計學系 三年級",
+        name: "淡江大學統計學系 四年級",
         time: "2023",
     }
 ]
