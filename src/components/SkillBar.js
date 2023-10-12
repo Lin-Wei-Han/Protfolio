@@ -7,17 +7,17 @@ const SkillBar = () => {
         {
             name: "React",
             className: "line react",
-            amount: 65,
+            amount: 75,
         },
         {
             name: "Javascript",
             className: "line js",
-            amount: 60,
+            amount: 65,
         },
         {
             name: "HTML",
             className: "line html",
-            amount: 80,
+            amount: 90,
         },
         {
             name: "CSS",
@@ -36,7 +36,7 @@ const SkillBar = () => {
         {
             name: "Python",
             className: "line python",
-            amount: 60,
+            amount: 70,
         },
         {
             name: "R",
@@ -46,7 +46,7 @@ const SkillBar = () => {
         {
             name: "SQL",
             className: "line sql",
-            amount: 30,
+            amount: 65,
         },
         {
             name: "SAS",
@@ -56,7 +56,7 @@ const SkillBar = () => {
         {
             name: "Power BI",
             className: "line power",
-            amount: 70,
+            amount: 80,
         },
 
     ]

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 import { css } from '@emotion/css/macro';
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
@@ -6,9 +7,10 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import { Link, Button } from '@mui/material';
+
 import { workList } from '../data/work';
 import { contestList } from '../data/contest';
-import { motion } from "framer-motion";
 
 const Experience = () => {
 
@@ -113,6 +115,23 @@ const Experience = () => {
                                                 </p>
                                             ))}</>
                                             : ""}
+                                        <div className='button-list'>
+                                            {work.demo ? (
+                                                <Link href={work.demo} underline="none" target="_blank">
+                                                    <Button className="custom-button">作品連結</Button>
+                                                </Link>
+                                            ) : ("")}
+                                            {work.ppt ? (
+                                                <Link href={work.ppt} underline="none" target="_blank">
+                                                    <Button className="custom-button">簡報說明</Button>
+                                                </Link>
+                                            ) : ("")}
+                                            {work.doc ? (
+                                                <Link href={work.doc} underline="none" target="_blank">
+                                                    <Button className="custom-button">專案報告</Button>
+                                                </Link>
+                                            ) : ("")}
+                                        </div>
                                     </div>
                                 </TimelineContent>
                             </TimelineItem>
@@ -163,6 +182,12 @@ const timeline = () => css`
         ul li {
             margin-left:40px;
         }
+    }
+    .custom-button{
+        margin-left:20px;
+        background-color: #006aa6;
+        color: white;
+        height: 22px;
     }
 }
 

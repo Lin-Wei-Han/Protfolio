@@ -2,158 +2,157 @@
 
 //font-family: 'Noto Sans TC', sans-serif;
 //font-family: 'Ubuntu', sans-serif;
-$html: 80%;
+$html: 90%;
 $css: 75%;
-$scss: 70%;
-$js: 60%;
-$react: 65%;
-$python: 50%;
+$scss: 75%;
+$js: 65%;
+$react: 75%;
+$python: 70%;
 $r: 80%;
 $sas: 65%;
-$sql: 30%;
-$power: 70%;
+$sql: 65%;
+$power: 80%;
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Ubuntu','Noto Sans TC', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', 'Noto Sans TC', sans-serif;
 }
-body{
-    height: 100vh;
+body {
+  height: 100vh;
 }
 
 @keyframes html {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$html;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $html;
+  }
 }
 
 @keyframes css {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$css;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $css;
+  }
 }
 
 @keyframes scss {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$scss;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $scss;
+  }
 }
 
 @keyframes js {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$js;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $js;
+  }
 }
 
 @keyframes react {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$react;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $react;
+  }
 }
 
 @keyframes python {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$python;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $python;
+  }
 }
 
 @keyframes r {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$r;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $r;
+  }
 }
 
 @keyframes sql {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$sql;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $sql;
+  }
 }
 
 @keyframes sas {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$sas;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $sas;
+  }
 }
 
 @keyframes power {
-    from {
-        width: 0;
-      }
-    
-      to {
-        width:$power;
-      }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: $power;
+  }
 }
 
-
-.skill-bar{
-    .html::before{
-        animation: html 1.4s ease forwards;
-    }
-    .css::before{
-        animation: css 1.2s ease forwards;
-    }
-    .scss::before{
-        animation: scss 1.6s ease forwards;
-    }
-    .js::before{
-        animation: js 1.5s ease forwards;
-    }
-    .react::before{
-        animation: react 1s ease forwards;
-    }
-    .python::before{
-        animation: python 1.2s ease forwards;
-    }
-    .r::before{
-        animation: r 0.82s ease forwards;
-    }
-    .sql::before{
-        animation: sql 1.3s ease forwards;
-    }
-    .sas::before{
-        animation: sas 0.6s ease forwards;
-    }
-    .power::before{
-        animation: power 1.2s ease forwards;
-    }
+.skill-bar {
+  .html::before {
+    animation: html 1.4s ease forwards;
+  }
+  .css::before {
+    animation: css 1.2s ease forwards;
+  }
+  .scss::before {
+    animation: scss 1.6s ease forwards;
+  }
+  .js::before {
+    animation: js 1.5s ease forwards;
+  }
+  .react::before {
+    animation: react 1s ease forwards;
+  }
+  .python::before {
+    animation: python 1.2s ease forwards;
+  }
+  .r::before {
+    animation: r 0.82s ease forwards;
+  }
+  .sql::before {
+    animation: sql 1.3s ease forwards;
+  }
+  .sas::before {
+    animation: sas 0.6s ease forwards;
+  }
+  .power::before {
+    animation: power 1.2s ease forwards;
+  }
 }
 
 /* @media screen and (max-width:540px) {

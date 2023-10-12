@@ -114,7 +114,7 @@ const Resume = () => {
                     </motion.section>
                     <motion.section variants={title} className="about-right">
                         <h1 className="title">John Lin</h1>
-                        <h5 className="secondary">21 years / Taiwanese / Web developer / Data analyst </h5>
+                        <h5 className="secondary">22 years / Taiwanese / Web developer / Data analyst </h5>
                         <p className="intro">從事網頁前端開發已有兩年經驗，熟悉HTML、CSS、Javascript...等語言，
                             並具備React框架開發能力。在網頁風格設計上，喜歡加入Animation元素，增加畫面精緻度。</p>
                         <p className="intro">同時，熟悉R、SAS、Python數據分析。喜歡透過視覺化的方式，呈現數據，

@@ -8,8 +8,16 @@ import powerbi_trafic from '../dist/image/project/powerbi_trafic.png';
 import reactobjectdetect from '../dist/image/project/reactobjectdetect.png';
 import shinydashboard from '../dist/image/project/shinydashboard.png';
 import clinicalTrial from '../dist/image/project/clinicalTrial.png';
+import nomenu from '../dist/image/project/nomenu.png';
 
 const projectDetail = [
+    {
+        title: "旅遊推薦系統平台",
+        info: "動態爬蟲Google景點資訊、評論，並使用評論內容建立詞向量模型。並以此結合協同式過濾、雙塔模型建構平台的推薦系統。並且利用Bert語言模型進行景點主題分類，分類結果用於平台使用。",
+        img: nomenu,
+        url: "https://no-menu.herokuapp.com/",
+        type: ["data", "web"]
+    },
     {
         title: "六都房價趨勢與預測儀表板",
         info: "以內政部實價登陸公布隻交易紀錄，實現六都房價走勢儀表板，並且以隨機數森林創建預測模型，針對房價做預測。亦提供嚴謹的統計檢定結果，分析六都差異。",

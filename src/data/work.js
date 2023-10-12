@@ -1,22 +1,22 @@
 export const workList = [
     {
-        title: "台北榮總傳染性疾病研究計畫",
-        secondary: "醫療研究部 兼任助理人員 | 2023.01 - Present",
-        description: "研究以 Deep Learning 對 SNP 進行特徵挑選。將深度學習與機器學習方法比較，分析各模型間預測疾病的結果。",
+        title: "一等一科技股份有限公司",
+        secondary: "Data Analyst Intern | 2023.01 - Present",
+        description: "利用機器學習模型預測客戶成交機率，並部屬模型。使用React、Python建構客戶預測系統，完成自動化訓練模型功能，並產出未來數月的預估成交金額。",
         skillList: [
             {
-                title: "R：資料清理、資料視覺化、模型建立",
+                title: "Python：資料清理、特徵工程、訓練模型、後端API",
                 content: null
             },
             {
-                title: "機器學習：SVM、決策樹、隨機森林",
+                title: "React：前端開發",
                 content: null
             },
         ]
     },
     {
         title: "幣想科技 BitShine",
-        secondary: "Frontend Intern | 2022.05 - Present",
+        secondary: "Frontend Intern | 2022.05 - 2023.09",
         description: "一年來熟悉團隊協作、Scrum流程，能獨立完成PM交付的工作。並培養以下能力：",
         skillList: [
             {
